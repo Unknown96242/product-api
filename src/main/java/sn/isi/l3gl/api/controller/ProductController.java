@@ -1,4 +1,4 @@
-package main.java.sn.isi.l3gl.api.controller;
+package sn.isi.l3gl.api.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

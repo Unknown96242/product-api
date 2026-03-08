@@ -1,4 +1,4 @@
-package main.java.sn.isi.l3gl.api;
+package sn.isi.l3gl.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
