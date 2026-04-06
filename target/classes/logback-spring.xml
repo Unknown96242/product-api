@@ -4,7 +4,11 @@
 
     <appender name="LOKI" class="com.github.loki4j.logback.Loki4jAppender">
         <http>
+<<<<<<< HEAD
             <url>http://192.168.1.34:3100/loki/api/v1/push</url>
+=======
+            <url>http://<ADRESSE-IP-VM2>:3100/loki/api/v1/push</url>
+>>>>>>> 27a0a8ec638b3f862661fdb2e7b054438c7b9aa0
         </http>
         <format>
             <label>
