@@ -50,12 +50,31 @@
         </dependency>
     </dependencies>
 
+    <!-- Repository Maven Central par défaut -->
     <repositories>
         <repository>
-            <id>nexus-releases</id>
-            <url>http://localhost:8081/repository/maven-releases/</url>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
         </repository>
     </repositories>
+
+    <profiles>
+        <!-- Profil activé UNIQUEMENT en local (hors GitLab CI) -->
+        <profile>
+            <id>local-dev</id>
+            <activation>
+                <property>
+                    <name>!CI</name>
+                </property>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>nexus-releases</id>
+                    <url>http://localhost:8081/repository/maven-releases/</url>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
 
     <build>
         <plugins>
